@@ -9,20 +9,18 @@ describe("ArrayMethods", function() {
       expect(arr[arr.length -1]).to.equal('plant');
     });
     it("should return the new length of an array", function() {
-
+      arr.newPush('tree');
+      expect(arr.length).to.equal(10);
     });
   });
 
   describe("Pop", function() {
+    it("should return the item that was removed", function() {
+      expect(arr.newPop()).to.equal("tree");
+    });
     it("should remove the last item of an array", function() {
-
-    });
-    it("should return the item that was removed",
-      function() {
-
-    });
-    it("should change the length of an array", function() {
-
+      arr.newPop();
+      expect(arr.length).to.equal(10);
     });
   });
 
